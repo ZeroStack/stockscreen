@@ -1,9 +1,11 @@
 Package: stockscreen
-Title: What the Package Does (one line, title case)
-Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Type: Package
+Title: Stock Screener
+Version: 0.0.1
+Author: Sahil Patel <email@example.com>
+Maintainer: Sahil Patel <email@example.com>
+Description: Functions to retrieve stocks that match a criteria
 Depends: R (>= 3.3.2)
-License: What license is it under?
+License: GPL
 Encoding: UTF-8
 LazyData: true
