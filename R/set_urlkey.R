@@ -24,7 +24,7 @@ set_url <- function(filename) {
     url.key <- jsonlite::fromJSON(filename)
     if(is.character(url.key$url_key)) {
       assign(x = 'url_key',
-             value = url_key$url_key,
+             value = url.key$url_key,
              envir = .url_key
              )
     } else {
@@ -34,9 +34,3 @@ set_url <- function(filename) {
 
   }
 }
-#' set_url <- function(filename) {
-#'   #check if file exists
-#'   if(!file.exists(filename))
-#'
-#'
-#' }
