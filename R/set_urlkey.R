@@ -21,7 +21,7 @@ set_url <- function(filename) {
     stop('file ', filename, "does not exists")
 
   } else {
-    url.key <- fromJSON(filename)
+    url.key <- jsonlite::fromJSON(filename)
   }
 }
 #' set_url <- function(filename) {
