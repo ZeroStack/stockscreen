@@ -22,6 +22,16 @@ set_url <- function(filename) {
 
   } else {
     url.key <- jsonlite::fromJSON(filename)
+    if(is.character(url.key$url_key)) {
+      assign(x = 'url_key',
+             value = url_key$url_key,
+             envir = .url_key
+             )
+    } else {
+      message("non-character url key")
+      return(invisible(NULL))
+    }
+
   }
 }
 #' set_url <- function(filename) {
