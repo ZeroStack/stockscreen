@@ -2,5 +2,6 @@
 
 export(screen)
 export(set_urlkey)
+importFrom(httr,GET)
 importFrom(jsonlite,fromJSON)
 importFrom(stringr,str_c)
