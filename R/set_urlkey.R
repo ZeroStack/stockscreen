@@ -15,7 +15,7 @@
 #' @return NULL
 #'
 #' @export
-set_url <- function(filename) {
+set_urlkey <- function(filename) {
   #check if file exists
   if(!file.exists(filename)) {
     stop('file ', filename, "does not exists")
