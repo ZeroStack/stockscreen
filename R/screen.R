@@ -4,11 +4,10 @@
 #'
 #'@export
 screen <- function(exchange) {
-  str_c(
+  temp.req <- str_c(get('url_key', envir = .url_key),
     #open square bracket
     "%5B",
-    exchange
-
+    exchange,
 
 
     #closing square bracket
@@ -17,4 +16,6 @@ screen <- function(exchange) {
   )
 
 }
+
+
 
