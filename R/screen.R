@@ -5,16 +5,16 @@
 #'@importFrom jsonlite fromJSON
 #'
 #'@export
-screen <- function(exchange) {
+screen <- function(market_cap) {
   # Build the json request
   temp.url <<- str_c(get('url_key', envir = .url_key),
     #open square bracket
-    #"%5B",
+    "%5B",
     exchange
 
 
     #closing square bracket
-    #"%5D"
+    "%5D"
 
   )
 
