@@ -11,7 +11,7 @@ screen <- function(market_cap = list()) {
   lookup <- c('[' = '%5B', ']' = '%5D', '(' = '%28', ')' = '%29', '>' = '>', '<' = '<', '=' = '%3D', '&' = '%26')
   
   # Build the json request
-  temp.url <<- str_c(get('url_key', envir = .url_key),
+  temp.url <- str_c(get('url_key', envir = .url_key),
     #open square bracket
     lookup[['[']],
     
@@ -32,4 +32,21 @@ screen <- function(market_cap = list()) {
 }
 
 
+formulate_criteria <- function(criteria_name, criteria) {
+  # initalise counter
+  i <- 1
+  temp <- purrr::map(criteria, function(x) {
+    if(i == 1) {
+      operator <- lookup[['<']]
+    } else {
+      operator <- lookup[['<']]
+    }
+    
+    #increment counter
+    i <- i + 1
+    stringr::str_c(lookup[['(']], criteria_name, '+', operator , lookup[['=']], '+',  x, lookup[[')']] )
+  })
+  
+  temp <- str_c(temp, collapse = stringr::str_c('+', lookup[['&']], '+') )
+}
 
