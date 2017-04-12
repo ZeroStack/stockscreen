@@ -6,15 +6,19 @@
 #'
 #'@export
 screen <- function(market_cap) {
+  
+  #Lookup for temp.url
+  lookup <- c('[' = '%5B', ']' = '%5D', '(' = '%28', ')' = '%29', '>' = '>', '<' = '<', '=' = '%3D', '&' = '%26')
+  
   # Build the json request
   temp.url <<- str_c(get('url_key', envir = .url_key),
     #open square bracket
-    "%5B",
-    exchange
+    lookup[['[']],
+    
 
 
     #closing square bracket
-    "%5D"
+    lookup[[']']]
 
   )
 
