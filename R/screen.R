@@ -5,7 +5,7 @@
 #'@importFrom jsonlite fromJSON
 #'
 #'@export
-screen <- function(market_cap) {
+screen <- function(market_cap = list()) {
   
   #Lookup for temp.url
   lookup <- c('[' = '%5B', ']' = '%5D', '(' = '%28', ')' = '%29', '>' = '>', '<' = '<', '=' = '%3D', '&' = '%26')

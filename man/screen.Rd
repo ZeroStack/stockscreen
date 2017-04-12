@@ -4,7 +4,7 @@
 \alias{screen}
 \title{Screen for stocks}
 \usage{
-screen(exchange)
+screen(market_cap = list())
 }
 \description{
 Screen for stocks
