@@ -14,7 +14,8 @@ screen <- function(market_cap = list(), pe_ratio = list(),
                    net_income_growth_rate_5years = list(),
                    revenue_growth_rate_10years = list(),
                    eps_growth_rate_10years = list(),
-                   interest_coverage_year = list()
+                   interest_coverage_year = list(),
+                   max_results = 1000
                    ) {
   
   #Lookup for temp.url
@@ -42,7 +43,7 @@ screen <- function(market_cap = list(), pe_ratio = list(),
     #closing square bracket
     lookup[[']']],
     #'&restype=company&output=json&noIL=1&ei=-RPuWKGMMIuc0AT0tL6IBQ'
-    '&output=json&ei=57VwWOnoM4mi0wTw_oagBA'
+    '&restype=company&noIL=1&num=', max_results ,'&output=json&ei=57VwWOnoM4mi0wTw_oagBA'
 
   )
 
