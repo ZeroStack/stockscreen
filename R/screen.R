@@ -23,7 +23,7 @@ screen <- function(market_cap = list(), pe_ratio = list(),
   
   print(lookup)
   # Build the json request
-  temp.url <<- str_c(get('url_key', envir = .url_key),
+  temp.url <- str_c(get('url_key', envir = .url_key),
     #open square bracket
     lookup[['[']],
     stringr::str_c(formulate_criteria('market_cap', market_cap, lookup),
